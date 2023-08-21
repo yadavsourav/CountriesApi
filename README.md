@@ -6,16 +6,14 @@ Generates a valid auth token. All the API endpoints are protected by auth. Fetch
                requirements -> Ide(eclipse preffered), postman for checking api, lombok jar file installed in ide
 1. Open the master branch of repository and download the zip file.
 2. Extract the zip file in a folder and now open an ide(eclipse).
-3. Now find import option from top corner and select existing maven project then browse the foder and finish.
-4. It will take some time to build if does not build it manually from above.
+3. Now find import option from top corner and in import select existing maven project then browse the folder and finish.
+4. It will take some time to build if does not, build it manually from above.
 5. After getting built you will get maven dependencies in resources.
 6. Now go src/main/java and open com.restcountries.assignment.
-7. And you will RestCountriesApplication.java file there, open it by double click and run this file from above.
-8. Or simply you can run this project by right clicking on project and click on run then run as java application then select 
-   com.restcountries.assignment package.
+7. And you will find RestCountriesApplication.java file there, open it by double click and run this file from above.
+8. Or simply you can run this project by right clicking on project and click on run option then run as java application option.From there select com.restcountries.assignment package.
 9. In console you would find code is compiling.
-10. One import thing project is using lombok for annotation so you should have lombok jar file installed in your ide 
-    otherwise it wouldn't work. If you don't have download and install it, you can take help of google.
+10. One important thing project is using lombok for annotation so you should have lombok jar file installed in your ide otherwise it wouldn't work. If you don't have download and install it, you can take help of google.
 11. As this project is secured by authentication token, so first we have to generate an authentication token by using 
     credentials which are hardcoded in AppConfig.java in AppConfig package.
 12. Now open postman and make a post request on http://localhost:8080/auth/login. Click on body option and select raw.
@@ -38,7 +36,8 @@ Generates a valid auth token. All the API endpoints are protected by auth. Fetch
 16. Change request mode to Get, now we are ready to use or test our endpoints.
 17. According to project reqirement it has two endpoints-
     (1st) -> http://localhost:8080/api/name/{countryname} ->  It will give detailed information of a specific country to user
-             example -> http://localhost:8080/name/india
+             example -> http://localhost:8080/api
+    /name/india
     (2nd) -> http://localhost:8080/api/countries
              In this api you have multiple filters that you can apply, so open the params option in postman and add the key 
              value pairs which you want to apply.
@@ -54,4 +53,4 @@ Generates a valid auth token. All the API endpoints are protected by auth. Fetch
              7. sortOrder            // asc or desc
                                   example ->  http://localhost:8080/api/countries?                    
                                   sortBy=population&sortOrder=desc&population>==10000000&language=english&page=0&size=7
-18. If you would try to access endpoints without authorization your access would be denied. On console
+19. If you would try to access endpoints without authorization your access would be denied. On console
